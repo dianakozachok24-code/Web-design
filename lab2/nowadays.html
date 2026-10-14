@@ -23,9 +23,16 @@
     .shopping-list > li:nth-child(odd) {
         background-color: gray;
         color: white;
-        list-style-type: disc;
-        padding-left: 40px;
     }
+    
+    .shopping-list {
+    list-style-position: outside;
+    list-style-type: disc;
+}
+
+.shopping-list li {
+    display: list-item;
+}
 
     .shopping-list > li:nth-child(even) {
         background-color: white;
