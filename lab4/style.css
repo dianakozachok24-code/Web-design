@@ -1,0 +1,211 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #222;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    text-align: center;
+    font-size: 30px;
+}
+
+h2 {
+    margin-top: 20px;
+}
+
+a {
+    color: #1559a6;
+}
+
+a:hover {
+    color: #c0392b;
+}
+
+.main-navigation {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.main-navigation a {
+    display: block;
+    padding: 10px 16px;
+    background-color: #dce8f5;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.biography-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.bio-block {
+    padding: 15px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.bio-university {
+    grid-column: span 2;
+}
+
+.nowadays-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.list-section {
+    padding: 15px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.friends-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+.friends-table th,
+.friends-table td {
+    border: 1px solid #999;
+    padding: 10px;
+    text-align: center;
+}
+
+.friends-table th {
+    font-size: 130%;
+    background-color: #dce8f5;
+}
+
+.friends-table td {
+    font-size: 120%;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.gallery-item {
+    padding: 15px;
+    text-align: center;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.gallery-item img {
+    width: 320px;
+    max-width: 100%;
+    height: 220px;
+    object-fit: contain;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    body {
+        font-size: 16px;
+    }
+
+    .main-navigation {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .main-navigation a {
+        text-align: center;
+    }
+
+    .biography-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .bio-university {
+        grid-column: span 2;
+    }
+
+    .nowadays-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .friends-table th {
+        font-size: 120%;
+    }
+
+    .friends-table td {
+        font-size: 110%;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-item:last-child {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 767px) {
+    body {
+        padding: 12px;
+        font-size: 15px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .main-navigation {
+        flex-direction: column;
+    }
+
+    .main-navigation a {
+        text-align: center;
+    }
+
+    .biography-grid,
+    .nowadays-grid,
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bio-university,
+    .gallery-item:last-child {
+        grid-column: auto;
+    }
+
+    .friends-table th {
+        font-size: 110%;
+    }
+
+    .friends-table td {
+        font-size: 100%;
+    }
+
+    .friends-table th,
+    .friends-table td {
+        padding: 6px;
+    }
+}
