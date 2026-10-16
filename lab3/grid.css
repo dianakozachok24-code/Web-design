@@ -1,0 +1,97 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 16px;
+    font-family: Arial, sans-serif;
+    color: #222;
+    background: #fff;
+    line-height: 1.5;
+}
+
+header, nav, main, footer {
+    max-width: 1100px;
+    margin: 0 auto 14px;
+}
+
+header {
+    padding: 16px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+h1, h2, h3 {
+    margin-top: 0;
+}
+
+nav {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 18px;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+a {
+    color: #222;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.page-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 16px;
+}
+
+.content {
+    min-width: 0;
+}
+
+.sidebar {
+    align-self: start;
+    padding: 12px;
+    border: 1px solid #ccc;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.card {
+    padding: 14px;
+    border: 1px solid #ccc;
+}
+
+footer {
+    padding: 12px 0;
+    border-top: 1px solid #ccc;
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+    .page-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    nav {
+        grid-auto-flow: row;
+        grid-auto-columns: auto;
+        gap: 8px;
+    }
+
+    .page-layout, .cards {
+        grid-template-columns: 1fr;
+    }
+}
