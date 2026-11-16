@@ -1,127 +1,132 @@
+
 * {
     box-sizing: border-box;
 }
 
 body {
     margin: 0;
-    padding: 16px;
     font-family: Arial, sans-serif;
     color: #222;
-    background: #fff;
-    line-height: 1.5;
+    background: white;
 }
 
-header, nav, main, footer {
-    max-width: 1100px;
-    margin: 0 auto 14px;
+.page-header {
+    padding: 20px 0 8px;
 }
 
-header {
-    padding: 16px 0;
-    border-bottom: 1px solid #ccc;
-}
-
-h1, h2, h3 {
-    margin-top: 0;
-}
-
-nav {
-    padding: 10px 0;
-    border-bottom: 1px solid #ccc;
-}
-
-nav a {
-    margin-right: 18px;
-}
-
-a {
-    color: #222;
-}
-
-a:hover {
-    text-decoration: none;
-}
-
-.content {
-    float: left;
-    width: 66.666%;
-    padding-right: 16px;
-}
-
-.sidebar {
-    float: right;
-    width: 33.333%;
-    padding: 12px;
-    border: 1px solid #ccc;
+h1 {
+    text-align: center;
+    font-size: 28px;
+    margin: 0;
 }
 
 .cards {
-    margin: 0 -1%;
+    width: 94%;
+    margin: 26px auto 0;
+}
+
+.cards::after {
+    content: "";
+    display: block;
+    clear: both;
 }
 
 .card {
     position: relative;
     float: left;
-    width: 48%;
-    min-height: 130px;
-    margin: 1%;
-    padding: 14px;
-    border: 1px solid #ccc;
+    width: 30.333333%;
+    margin: 0 1.5% 28px;
+    min-height: 220px;
+    border: 2px solid black;
+    background: #d8e9d7;
 }
 
-.number {
+.card-title {
     position: absolute;
-    top: 8px;
-    right: 10px;
-    color: #666;
+    top: -2px;
+    right: -2px;
+    margin: 0;
+    padding: 5px 18px;
+    border: 2px solid black;
+    font-size: 20px;
+    text-align: center;
+    min-width: 140px;
+    background: orange;
+    color: black;
 }
 
-.clearfix::after {
-    content: "";
-    display: table;
+.card-2 .card-title {
+    background: #db0076;
+    color: white;
+}
+
+.card-3 .card-title {
+    background: #f7dcd8;
+    color: black;
+}
+
+.card p {
+    margin: 0;
+    padding: 58px 16px 14px;
+    font-size: 17px;
+    line-height: 1.65;
+}
+
+.switch-links {
     clear: both;
+    width: 94%;
+    margin: 26px auto;
 }
 
-footer {
-    padding: 12px 0;
-    border-top: 1px solid #ccc;
+.switch-links a {
+    display: block;
+    margin: 8px 0;
+    color: #154a8b;
+    font-size: 16px;
+}
+
+.switch-links a:hover {
+    color: #b00068;
+}
+
+.page-footer {
+    clear: both;
+    height: 36px;
+    background: #a5a5a5;
+    border-top: 2px solid #333;
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
-    .content, .sidebar {
-        float: none;
-        width: 100%;
+    .card {
+        width: 47%;
+        min-height: 220px;
     }
 
-    .content {
-        padding-right: 0;
-        margin-bottom: 16px;
+    .card-3 {
+        width: 97%;
+        min-height: 0;
     }
 }
 
 @media (max-width: 768px) {
-    body {
-        padding: 10px;
-    }
-
-    nav a {
-        display: block;
-        margin: 5px 0;
-    }
-
-    .content, .sidebar {
-        float: none;
-        width: 100%;
-    }
-
-    .content {
-        padding-right: 0;
-        margin-bottom: 16px;
+    h1 {
+        font-size: 24px;
     }
 
     .card {
         float: none;
-        width: 98%;
-        margin: 1%;
+        width: 97%;
+        min-height: 0;
+        margin-bottom: 26px;
+    }
+
+    .card-title {
+        font-size: 17px;
+        min-width: 112px;
+    }
+
+    .card p {
+        font-size: 15px;
+        padding: 47px 12px 12px;
     }
 }
