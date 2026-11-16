@@ -7,7 +7,7 @@ body {
     margin: 0;
     padding: 20px;
     font-family: Arial, sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.6;
     color: #222;
     background-color: #f4f4f4;
@@ -15,11 +15,19 @@ body {
 
 h1 {
     text-align: center;
-    font-size: 30px;
+    font-size: 24px;
 }
 
-h2 {
-    margin-top: 20px;
+.intro {
+    font-size: 120%;
+}
+
+.page-title {
+    font-size: 22px;
+}
+
+.back {
+    font-style: italic;
 }
 
 a {
@@ -30,50 +38,201 @@ a:hover {
     color: #c0392b;
 }
 
-.main-navigation {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+/* ГОЛОВНА СТОРІНКА */
+
+.home-navigation {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 15px;
     margin: 25px 0;
 }
 
-.main-navigation a {
+.home-navigation a {
     display: block;
-    padding: 10px 16px;
-    background-color: #dce8f5;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #999;
     border-radius: 6px;
+    background-color: #dce8f5;
     text-decoration: none;
+}
+
+.biography:link {
+    color: red;
+}
+
+.biography:visited {
+    color: darkred;
+}
+
+.nowadays:link {
+    color: blue;
+}
+
+.nowadays:visited {
+    color: darkblue;
+}
+
+.friends:link {
+    color: green;
+}
+
+.friends:visited {
+    color: darkgreen;
+}
+
+.gallery:link {
+    color: orange;
+}
+
+.gallery:visited {
+    color: brown;
+}
+
+/* АВТОБІОГРАФІЯ */
+
+#content {
+    text-align: center;
+}
+
+.content-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.content-navigation a,
+.content-navigation a:link,
+.content-navigation a:visited {
+    display: block;
+    width: 220px;
+    padding: 10px;
+    text-align: center;
+    border: 2px solid black;
+    background-color: blue;
+    color: white;
+    text-decoration: none;
+}
+
+.content-navigation a:hover {
+    background-color: magenta;
+    color: white;
+}
+
+.content-navigation a:active {
+    background-color: yellow;
+    color: black;
 }
 
 .biography-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 20px;
+    align-items: stretch;
+}
+
+.bio-item {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
 }
 
 .bio-block {
+    flex: 1;
     padding: 15px;
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 8px;
+    border: 1px solid black;
+    font-size: 120%;
+}
+
+.bio-block h2 {
+    font-size: 120%;
+}
+
+.bio-block p {
+    margin-bottom: 0;
+}
+
+.bio-basic {
+    background-color: lightblue;
+    color: darkblue;
+}
+
+.bio-childhood {
+    background-color: lightgreen;
+    color: darkgreen;
+}
+
+.bio-school {
+    background-color: lightyellow;
+    color: #795400;
+}
+
+.bio-outside {
+    background-color: lavender;
+    color: purple;
+}
+
+.bio-university-block {
+    background-color: lightpink;
+    color: darkred;
 }
 
 .bio-university {
     grid-column: span 2;
 }
 
+.to-content {
+    display: block;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.up {
+    text-transform: uppercase;
+}
+
+/* СЬОГОДЕННЯ */
+
 .nowadays-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 20px;
 }
 
 .list-section {
-    padding: 15px;
+    min-width: 0;
+    padding: 10px;
+}
+
+.list-section h2 {
+    text-align: center;
+}
+
+.shopping-list > li:nth-child(odd) {
+    background-color: gray;
+    color: white;
+}
+
+.shopping-list > li:nth-child(even) {
     background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 8px;
+    color: black;
+}
+
+.dessert-list > li:nth-child(3),
+.dessert-list > li:nth-child(5) {
+    cursor: pointer;
+}
+
+.dessert-list > li:nth-child(4) {
+    background-color: lightblue;
+}
+
+/* ДРУЗІ */
+
+.friends-heading {
+    text-align: center;
 }
 
 .table-wrapper {
@@ -87,59 +246,101 @@ a:hover {
     background-color: white;
 }
 
+.friends-table caption {
+    padding: 10px;
+    font-weight: bold;
+}
+
 .friends-table th,
 .friends-table td {
-    border: 1px solid #999;
+    border: 2px solid black;
     padding: 10px;
-    text-align: center;
 }
 
 .friends-table th {
+    text-align: center;
+    background-color: green;
+    color: white;
+    font-weight: bold;
     font-size: 130%;
-    background-color: #dce8f5;
 }
 
 .friends-table td {
     font-size: 120%;
 }
 
+.friends-table tbody tr:nth-child(odd) {
+    background-color: gray;
+    color: white;
+}
+
+.friends-table tbody tr:nth-child(even) {
+    background-color: white;
+    color: black;
+}
+
+.friends-table th:last-child,
+.friends-table td:last-child {
+    text-align: right;
+}
+
+/* ГАЛЕРЕЯ */
+
+.gallery-page-title {
+    font-size: 20px;
+}
+
+.gallery-heading {
+    text-align: center;
+}
+
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 20px;
 }
 
 .gallery-item {
-    padding: 15px;
+    min-width: 0;
     text-align: center;
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 8px;
+    padding: 10px;
+}
+
+.gallery-item h3 {
+    text-align: center;
+}
+
+.small-title {
+    font-size: 70%;
+}
+
+.large-title {
+    font-size: 130%;
+}
+
+.online-title {
+    font-size: 169%;
 }
 
 .gallery-item img {
+    display: block;
     width: 320px;
     max-width: 100%;
     height: 220px;
     object-fit: contain;
+    margin: 0 auto;
 }
 
+/* TABLET */
+
 @media (min-width: 768px) and (max-width: 991px) {
-    body {
-        font-size: 16px;
-    }
 
-    .main-navigation {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .main-navigation a {
-        text-align: center;
+    .home-navigation {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .biography-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .bio-university {
@@ -159,41 +360,42 @@ a:hover {
     }
 
     .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .gallery-item:last-child {
         grid-column: span 2;
     }
+
+    .gallery-item img {
+        width: 300px;
+        max-width: 100%;
+        height: 220px;
+    }
 }
 
+/* MOBILE */
+
 @media (max-width: 767px) {
+
     body {
         padding: 12px;
-        font-size: 15px;
     }
 
-    h1 {
-        font-size: 24px;
-    }
-
-    .main-navigation {
-        flex-direction: column;
-    }
-
-    .main-navigation a {
-        text-align: center;
-    }
-
-    .biography-grid,
-    .nowadays-grid,
-    .gallery-grid {
+    .home-navigation {
         grid-template-columns: 1fr;
     }
 
-    .bio-university,
-    .gallery-item:last-child {
+    .biography-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bio-university {
         grid-column: auto;
+    }
+
+    .nowadays-grid {
+        grid-template-columns: 1fr;
     }
 
     .friends-table th {
@@ -207,5 +409,19 @@ a:hover {
     .friends-table th,
     .friends-table td {
         padding: 6px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item:last-child {
+        grid-column: auto;
+    }
+
+    .gallery-item img {
+        width: 280px;
+        max-width: 100%;
+        height: 210px;
     }
 }
