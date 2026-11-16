@@ -6,127 +6,126 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    color: #222;
-    background: white;
+    background-color: white;
+    color: black;
 }
 
-.page-header {
-    padding: 20px 0 8px;
+header {
+    text-align: center;
+    padding: 20px;
 }
 
 h1 {
-    text-align: center;
     font-size: 28px;
-    margin: 0;
 }
 
-.cards {
+.container {
     width: 94%;
-    margin: 26px auto 0;
+    margin: 0 auto;
 }
 
-.cards::after {
+.row {
+    width: 100%;
+}
+
+.row::after {
     content: "";
     display: block;
     clear: both;
 }
 
-.card {
-    position: relative;
+.block {
     float: left;
+    position: relative;
     width: 30.333333%;
-    margin: 0 1.5% 28px;
-    min-height: 220px;
+    margin: 1.5%;
     border: 2px solid black;
-    background: #d8e9d7;
+    background-color: #d7e8d6;
+    min-height: 225px;
 }
 
-.card-title {
+.block h2 {
     position: absolute;
     top: -2px;
     right: -2px;
     margin: 0;
-    padding: 5px 18px;
+    padding: 5px 15px;
+    min-width: 140px;
+    text-align: center;
     border: 2px solid black;
     font-size: 20px;
-    text-align: center;
-    min-width: 140px;
-    background: orange;
+}
+
+.block1 h2 {
+    background-color: orange;
     color: black;
 }
 
-.card-2 .card-title {
-    background: #db0076;
+.block2 h2 {
+    background-color: #e00075;
     color: white;
 }
 
-.card-3 .card-title {
-    background: #f7dcd8;
+.block3 h2 {
+    background-color: #f7d9d5;
     color: black;
 }
 
-.card p {
+.block p {
     margin: 0;
-    padding: 58px 16px 14px;
+    padding: 60px 16px 15px;
     font-size: 17px;
-    line-height: 1.65;
+    line-height: 1.7;
 }
 
-.switch-links {
+nav {
     clear: both;
-    width: 94%;
-    margin: 26px auto;
+    margin: 20px 1.5%;
 }
 
-.switch-links a {
+nav a {
     display: block;
-    margin: 8px 0;
-    color: #154a8b;
-    font-size: 16px;
+    margin: 10px 0;
+    color: blue;
 }
 
-.switch-links a:hover {
-    color: #b00068;
+footer {
+    height: 35px;
+    background-color: #aaa;
+    border: 2px solid #333;
 }
 
-.page-footer {
-    clear: both;
-    height: 36px;
-    background: #a5a5a5;
-    border-top: 2px solid #333;
-}
 
 @media (min-width: 769px) and (max-width: 992px) {
-    .card {
+
+    .block {
         width: 47%;
-        min-height: 220px;
+        min-height: 225px;
     }
 
-    .card-3 {
+    .block3 {
         width: 97%;
         min-height: 0;
+        clear: both;
     }
 }
 
 @media (max-width: 768px) {
-    h1 {
-        font-size: 24px;
-    }
 
-    .card {
+    .block {
         float: none;
         width: 97%;
         min-height: 0;
-        margin-bottom: 26px;
+        margin: 20px 1.5%;
     }
 
-    .card-title {
-        font-size: 17px;
-        min-width: 112px;
+    .block h2 {
+        font-size: 18px;
+        min-width: 110px;
     }
 
-    .card p {
+    .block p {
+        padding: 55px 12px 15px;
         font-size: 15px;
-        padding: 47px 12px 12px;
     }
 }
