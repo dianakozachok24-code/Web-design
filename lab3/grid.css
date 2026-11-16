@@ -1,97 +1,132 @@
+
 * {
     box-sizing: border-box;
 }
 
 body {
     margin: 0;
-    padding: 16px;
     font-family: Arial, sans-serif;
     color: #222;
-    background: #fff;
-    line-height: 1.5;
+    background: white;
 }
 
-header, nav, main, footer {
-    max-width: 1100px;
-    margin: 0 auto 14px;
+.page-header {
+    padding: 20px 0 8px;
 }
 
-header {
-    padding: 16px 0;
-    border-bottom: 1px solid #ccc;
-}
-
-h1, h2, h3 {
-    margin-top: 0;
-}
-
-nav {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    gap: 18px;
-    padding: 10px 0;
-    border-bottom: 1px solid #ccc;
-}
-
-a {
-    color: #222;
-}
-
-a:hover {
-    text-decoration: none;
-}
-
-.page-layout {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 16px;
-}
-
-.content {
-    min-width: 0;
-}
-
-.sidebar {
-    align-self: start;
-    padding: 12px;
-    border: 1px solid #ccc;
+h1 {
+    text-align: center;
+    font-size: 28px;
+    margin: 0;
 }
 
 .cards {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 12px;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    column-gap: 0;
+    row-gap: 28px;
+    width: 94%;
+    margin: 26px auto 0;
 }
 
 .card {
-    padding: 14px;
-    border: 1px solid #ccc;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-column: span 4;
+    margin: 0 4.5%;
+    border: 2px solid black;
+    background: #d8e9d7;
+    min-width: 0;
+    min-height: 220px;
 }
 
-footer {
-    padding: 12px 0;
-    border-top: 1px solid #ccc;
+.card-title {
+    justify-self: end;
+    margin: -2px -2px 0 0;
+    padding: 5px 18px;
+    border: 2px solid black;
+    font-size: 20px;
+    text-align: center;
+    min-width: 140px;
+    background: orange;
+    color: black;
+}
+
+.card-2 .card-title {
+    background: #db0076;
+    color: white;
+}
+
+.card-3 .card-title {
+    background: #f7dcd8;
+    color: black;
+}
+
+.card p {
+    margin: 0;
+    padding: 25px 16px 14px;
+    font-size: 17px;
+    line-height: 1.65;
+}
+
+.switch-links {
+    width: 94%;
+    margin: 26px auto;
+}
+
+.switch-links a {
+    display: block;
+    margin: 8px 0;
+    color: #154a8b;
+    font-size: 16px;
+}
+
+.switch-links a:hover {
+    color: #b00068;
+}
+
+.page-footer {
+    height: 36px;
+    background: #a5a5a5;
+    border-top: 2px solid #333;
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
-    .page-layout {
-        grid-template-columns: 1fr;
+    .card {
+        grid-column: span 6;
+        min-height: 220px;
+        margin: 0 3%;
+    }
+
+    .card-3 {
+        grid-column: 1 / -1;
+        min-height: 0;
+        margin: 0 1.5%;
     }
 }
 
 @media (max-width: 768px) {
-    body {
-        padding: 10px;
+    h1 {
+        font-size: 24px;
     }
 
-    nav {
-        grid-auto-flow: row;
-        grid-auto-columns: auto;
-        gap: 8px;
+    .cards {
+        row-gap: 26px;
     }
 
-    .page-layout, .cards {
-        grid-template-columns: 1fr;
+    .card {
+        grid-column: 1 / -1;
+        min-height: 0;
+        margin: 0 1.5%;
+    }
+
+    .card-title {
+        font-size: 17px;
+        min-width: 112px;
+    }
+
+    .card p {
+        font-size: 15px;
+        padding: 25px 12px 12px;
     }
 }
