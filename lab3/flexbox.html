@@ -4,47 +4,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Лабораторна №3 — Flexbox</title>
+    <title>CSS Flexbox</title>
     <link rel="stylesheet" href="flexbox.css">
 </head>
 <body>
-
-    <header class="page-header">
+    <header>
         <h1>Main caption</h1>
     </header>
 
-    <main class="cards">
+    <main class="container">
 
-        <article class="card card-1">
-            <h2 class="card-title">Caption 1</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Aliquid amet blanditiis consequatur dolore doloremque ex hic in,
-            ipsam ipsum itaque magnam magni maiores modi odit omnis.</p>
-        </article>
+        <div class="row">
+            <section class="block block1">
+                <h2>Caption 1</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Aliquid amet blanditiis
+                    consequatur dolore doloremque ex hic in,
+                    ipsam ipsum itaque magnam magni maiores
+                    modi odit omnis.
+                </p>
+            </section>
 
-        <article class="card card-2">
-            <h2 class="card-title">Caption 2</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Aliquid amet blanditiis consequatur dolore doloremque ex hic in,
-            ipsam ipsum itaque magnam magni maiores modi odit omnis.</p>
-        </article>
+            <section class="block block2">
+                <h2>Caption 2</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Aliquid amet blanditiis
+                    consequatur dolore doloremque ex hic in,
+                    ipsam ipsum itaque magnam magni maiores
+                    modi odit omnis.
+                </p>
+            </section>
 
-        <article class="card card-3">
-            <h2 class="card-title">Caption 3</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Placeat magnam, eius incidunt, ullam fuga eveniet facere, quos,
-            minima labore nobis quam! Quae delectus iure ullam facere illo
-            eum suscipit molestiae harum, voluptas dolores quos blanditiis.</p>
-        </article>
+            <section class="block block3">
+                <h2>Caption 3</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Placeat magnam, eius
+                    incidunt, ullam fuga eveniet facere,
+                    quos, minima labore nobis quam!
+                    Quae delectus iure ullam facere illo
+                    eum suscipit molestiae harum.
+                </p>
+            </section>
+        </div>
+
+        <nav>
+            <a href="index.html">Switch to Float & Positioning</a>
+            <a href="grid.html">Switch to CSS Grid</a>
+        </nav>
 
     </main>
 
-    <nav class="switch-links">
-        <a href="index.html">Switch to Float & Positioning</a>
-        <a href="grid.html">Switch to CSS Grid</a>
-    </nav>
-
-    <footer class="page-footer"></footer>
-
+    <footer></footer>
 </body>
 </html>
