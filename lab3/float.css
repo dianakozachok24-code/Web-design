@@ -41,7 +41,7 @@ h1 {
     margin: 1.5%;
     border: 2px solid black;
     background-color: #d7e8d6;
-    height: 225px;
+    min-height: 225px;
 }
 
 .block h2 {
@@ -96,23 +96,25 @@ footer {
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
+
     .block {
         width: 47%;
-        height: 225px;
+        min-height: 225px;
     }
 
     .block3 {
         width: 97%;
-        height: 225px;
+        min-height: 0;
         clear: both;
     }
 }
 
 @media (max-width: 768px) {
+
     .block {
         float: none;
         width: 97%;
-        height: 225px;
+        min-height: 0;
         margin: 20px 1.5%;
     }
 
