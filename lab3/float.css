@@ -96,16 +96,16 @@ footer {
 }
 
 
+
 @media (min-width: 769px) and (max-width: 992px) {
     .block {
         width: 47%;
-        height: 225px;
-        min-height: 0;
+        min-height: 300px;
     }
 
     .block3 {
         width: 97%;
-        height: 225px;
+        min-height: 300px;
         clear: both;
     }
 }
@@ -114,8 +114,7 @@ footer {
     .block {
         float: none;
         width: 97%;
-        height: 225px;
-        min-height: 0;
+        min-height: 300px;
         margin: 20px 1.5%;
     }
 
@@ -129,5 +128,4 @@ footer {
         font-size: 15px;
     }
 }
-
 
